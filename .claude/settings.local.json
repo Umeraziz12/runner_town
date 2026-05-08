@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(npx tsc *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(mkdir -p features/auth/screens features/run/screens features/territory/screens features/leaderboard/screens features/profile/screens features/home/screens)",
+      "Bash(mv screens/LoginScreen.tsx features/auth/screens/LoginScreen.tsx)",
+      "Bash(mv screens/SignupScreen.tsx features/auth/screens/SignupScreen.tsx)",
+      "Bash(mv screens/DashboardScreen.tsx features/run/screens/DashboardScreen.tsx)",
+      "Bash(mv screens/RunScreen.tsx features/run/screens/RunScreen.tsx)",
+      "Bash(echo \"tsc exit: $?\")"
+    ]
+  }
+}
