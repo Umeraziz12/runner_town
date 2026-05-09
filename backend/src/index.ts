@@ -1,14 +1,11 @@
-import dotenv from 'dotenv';
+import { env } from './config/env.js';
+import { logger } from './utils/logger.js';
 import { createApp } from './app.js';
 import { createHttpServer } from './server.js';
-
-dotenv.config();
-
-const PORT = process.env.PORT || 3000;
 
 const app = createApp();
 const httpServer = createHttpServer(app);
 
-httpServer.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+httpServer.listen(env.PORT, () => {
+  logger.info({ port: env.PORT, env: env.NODE_ENV }, 'server started');
 });
